@@ -1,5 +1,7 @@
-import { server } from "./server/Server";
+import { server } from './server/Server';
 
 server.listen(3333, () => {
-  console.log("rodando na porta 3000");
+  console.log('rodando na porta 3000');
 });
+
+
