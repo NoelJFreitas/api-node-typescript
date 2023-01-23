@@ -1,13 +1,11 @@
 import express from 'express';
+import { router } from './routes';
+import 'dotenv/config'; //lib para usar variaveis de ambiente
 
 const server = express();
 
-server.get('/', (_, res) => {
-  return res.send('Ola, dev! server rodando ');
-});
- 
-export {
-  server
-};
+server.use(express.json());
+server.use(router);
 
-console.log('');
+export { server };
+
